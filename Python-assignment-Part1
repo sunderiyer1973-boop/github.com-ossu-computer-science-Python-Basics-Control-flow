@@ -71,8 +71,58 @@ for i in range(len(subjects)):
     else:
         grade = "Fail"
     print(f"{subjects[i]} : {m} → {grade}")
- 
 
+</>markdown
+*Task 3 — Class Performance Summary*
+class_data = [
+       ("Ayesha  Sharm",  [88, 72, 95, 60, 78]),
+    ("Rohit verma",    [55, 68, 49, 72, 61]),
+    ("Priya Nair",     [91, 85, 88, 94, 79]),
+    ("Karan mehta",    [40, 55, 38, 62, 50]),
+    ("Sneha Pillai",   [75, 80, 70, 68, 85]),
+]
 
+print("Report              | Average | Status")
+print("----------------------------------------")
 
+pass_count = 0
+fail_count = 0
+averages = []
+
+top_student = ""
+top_avg = 0
+
+# Loop through class data
+for name, marks in class_data:
+
+    # Calculate average
+    avg = round(sum(marks) / len(marks), 2)
+    averages.append(avg)
+
+    # Determine Pass/Fail
+    if avg >= 60:
+        status = "Pass"
+        pass_count += 1
+    else:
+        status = "Fail"
+        fail_count += 1
+
+    # Find topper
+    if avg > top_avg:
+        top_avg = avg
+        top_student = name
+
+    # print formatted row
+    print(f"{name:<18} | {avg:>7.2f} | {status}")
+
+# -------------------------------
+# Final Summary
+# -------------------------------
+class_average = round(sum(averages) / len(averages), 2)
+
+print("\nSummary:")
+print(f"Passed Students : {pass_count}")
+print(f"Failed Students : {fail_count}")
+print(f"Class Topper    : {top_student} ({top_avg})")
+print(f"Class Average   : {class_average}")
 
