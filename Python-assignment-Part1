@@ -35,3 +35,44 @@ for student in raw_students:
 
 print("\n--- Cleaned Students List ---")
 print(Cleaned_Students)
+</>markdown
+*2 — Marks Analysis Using Loops & Conditionals * 
+student_name = "Ayesha Sharma"
+subjects     = ["Math", "Physics", "CS", "English", "Chemistry"]
+marks        = [88, 72, 95, 60, 78]
+print("Subject-wise Performance :\n")
+for i in range(len(subjects)):
+    m = marks[i]
+    if 90 <= m <= 100:
+        grade = "A+"
+    elif 80 <= m <= 89:
+        grade = "A"
+    elif 70 <= m <= 79:
+        grade = "B"
+    elif 60 <= m <= 69:
+        grade = "C"
+    else:
+        grade = "Fail"
+    print(f"{subjects[i]} : {m} → {grade}")
+student_name = "Ayesha Sharma"
+subjects     = ["Math", "Physics", "CS", "English", "Chemistry"]
+marks        = [88, 72, 95, 60, 78]
+print("Subject-wise Performance :\n")
+for i in range(len(subjects)):
+    m = marks[i]
+    if 90 <= m <= 100:
+        grade = "A+"
+    elif 80 <= m <= 89:
+        grade = "A"
+    elif 70 <= m <= 79:
+        grade = "B"
+    elif 60 <= m <= 69:
+        grade = "C"
+    else:
+        grade = "Fail"
+    print(f"{subjects[i]} : {m} → {grade}")
+ 
+
+
+
+
