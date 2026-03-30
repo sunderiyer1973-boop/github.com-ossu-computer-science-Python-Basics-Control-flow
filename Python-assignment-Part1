@@ -1,1 +1,37 @@
+raw_students = [
+    {"name": "  ayesha SHARMA  ", "roll": "101", "marks_str": "88, 72, 95, 60, 78"},
+    {"name": "ROHIT verma",       "roll": "102", "marks_str": "55, 68, 49, 72, 61"},
+    {"name": "  Priya Nair  ",    "roll": "103", "marks_str": "91, 85, 88, 94, 79"},
+    {"name": "karan MEHTA",       "roll": "104", "marks_str": "40, 55, 38, 62, 50"},
+    {"name": " Sneha pillai ",    "roll": "105", "marks_str": "75, 80, 70, 68, 85"},
+]
 
+Cleaned_Students = []
+
+for student in raw_students:
+    # Cleaning of Name
+    name = student["name"].strip().title()
+    # Conversion of Roll Number to Integer
+    roll = int(student["roll"])
+    marks = [int(x.strip()) for x in student["marks_str"].split(",")]
+    is_valid  = all(word.isalpha() for word in name.split())
+
+    if is_valid:
+        print(f"{name} → ✓ Valid name")
+    else:
+        print(f"{name} → ✗ Invalid name")
+
+    Cleaned_Students.append({
+        "name": name,
+        "roll": roll,
+        "marks": marks
+    })
+
+    # Print Profile Card
+    print(f"student: {name}")
+    print(f"Roll no: {roll}")
+    print(f"marks: {marks}")
+    print("--------------------") # Separator for each student's profile
+
+print("\n--- Cleaned Students List ---")
+print(Cleaned_Students)
