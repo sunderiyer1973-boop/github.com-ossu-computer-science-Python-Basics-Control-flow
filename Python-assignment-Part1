@@ -35,6 +35,7 @@ for student in raw_students:
 
 print("\n--- Cleaned Students List ---")
 print(Cleaned_Students)
+==================================================================================================================================================================
 </>markdown
 *2 — Marks Analysis Using Loops & Conditionals * 
 student_name = "Ayesha Sharma"
@@ -71,7 +72,7 @@ for i in range(len(subjects)):
     else:
         grade = "Fail"
     print(f"{subjects[i]} : {m} → {grade}")
-
+===================================================================================================================================================================
 </>markdown
 *Task 3 — Class Performance Summary*
 class_data = [
@@ -125,4 +126,53 @@ print(f"Passed Students : {pass_count}")
 print(f"Failed Students : {fail_count}")
 print(f"Class Topper    : {top_student} ({top_avg})")
 print(f"Class Average   : {class_average}")
+====================================================================================================================================================================
+# Task 4  String Manipulation Utility
+essay = " python is a versatile language. it supports object oriented, functional, and procedural programming. python is widely used in data science and machine learning. "
+
+# -------------------------------
+# Strip whitespace (1)
+# -------------------------------
+clean_essay = essay.strip()
+print("1. Clean Essay:")
+print(clean_essay)
+
+# Title Case (2)
+# -------------------------------
+title_case = clean_essay.title()
+print("\n2. Title Case:")
+print(title_case)
+
+# Count 'python' (3)
+# -------------------------------
+count_Python = clean_essay.count("python")
+print("\n3. Count of 'python':", count_Python)
+
+
+# Replace 'python' (4)
+# -------------------------------
+replaced_essay = clean_essay.replace("python", "Python 🐍")
+print("\n4. Replaced Essay:")
+print(replaced_essay)
+
+
+# Split into sentences (5)
+# -------------------------------
+sentences = clean_essay.split(". ")
+print("\n5. Sentences List:")
+print(sentences)
+
+
+# Print numbered sentences (6)
+# -------------------------------
+print("\n6. Numbered Sentences:")
+
+for i in range(len(sentences)):
+    sentence = sentences[i]
+
+    # Ensure sentence ends with '.'
+    if not sentence.endswith("."):
+        sentence = sentence + "."
+
+    print(f"{i+1}. {sentence}")
 
